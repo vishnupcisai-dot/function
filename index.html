@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>count</title>
+    <style>
+        *{
+            margin: 0;
+        }
+        .headCntr{
+            position: absolute;
+            font-size: 5vw;
+            color: white;
+            text-align: center;
+            width: 100%;
+            top: 10%;
+
+        }
+        .cntr{
+         width: 100%;
+         height: 100vh;
+         background-color: gray;
+         display: flex;
+         align-items: center;
+         justify-content: center;
+        }
+        .main{
+            width: 60vw;
+            height: 70vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .subcntr{
+            width: 60%;
+            height: 50%;
+            background-color: orange;
+            padding: 8px;
+            box-sizing: border-box;
+            display: grid;
+            justify-content: center;
+            gap: 13px;
+            align-items: center;
+        }
+        ul{
+            display: grid;
+            gap: 12px;
+            align-items: center;
+            justify-content: center;
+            background-color: white;
+            padding: 12px 23px;
+        }
+        li{
+            border: 1px solid black;
+            padding: 12px 21px;
+        }
+        button{
+            padding: 12px;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="headCntr">This is simple function test </div>
+    <div class="cntr">
+        <div class="main">
+            <div class="subcntr">
+                <ul>
+                    <li id="red">R: 1</li>
+                    <li id="green">G: 1</li>
+                    <li id="blue">B: 1</li>
+                </ul>
+                <div>
+                <button id="button1" onclick="addCnt()">Add</button>
+                <button id="button2" onclick="resetCnt()">Reset</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+  let count = 0
+            function addCnt(){
+                          
+               count =  count + 1;
+            document.getElementById("red").innerText= `R: ${count}`;
+            document.getElementById("green").innerText= `G: ${count}`;
+            document.getElementById("blue").innerText= `B: ${count}`;
+            }
+
+            function resetCnt(){
+
+                    count =  0;
+            document.getElementById("red").innerText= `R: ${count}`;
+            document.getElementById("green").innerText= `G: ${count}`;
+            document.getElementById("blue").innerText= `B: ${count}`;
+            }
+    </script>
+</body>
+</html>
